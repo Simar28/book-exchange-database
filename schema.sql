@@ -22,7 +22,9 @@ CREATE TABLE book (
     price NUMERIC(10,2),
     category VARCHAR(100),
     location VARCHAR(100),
-    owner_id INTEGER REFERENCES users(user_id)
+    owner_id INTEGER REFERENCES users(user_id),
+    description TEXT,
+    image_url TEXT
 );
 
 -- ExchangeOffer Table
@@ -59,3 +61,4 @@ CREATE TABLE review (
     rating INTEGER CHECK (rating BETWEEN 1 AND 5),
     comment TEXT
 );
+
